@@ -20,7 +20,7 @@ function onButtonClicked() {
     generated.innerHTML = `The hidden number: ${randomNum}`
 }
 
-let checkIfEnter = (event) => event.keyCode === 13 
+const checkIfEnter = (event) => event.keyCode === 13 
 
 document.getElementById("inputnum").addEventListener("keypress", event => {
     const checkbtn = document.getElementById("checkbtn")
