@@ -1,6 +1,6 @@
 function onButtonClicked() {
     const multBy = getById("maxNum").value == "" ? 
-        10 : get("maxNum").value
+        10 : getById("maxNum").value
 
     const randomNum = Math.floor(Math.random() * multBy + 1)
     const out = getById("out")
