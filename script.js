@@ -4,9 +4,9 @@ function onButtonClicked() {
     const generated = document.getElementById("generated")
     const input = document.getElementById("inputnum").value
 
-    if(input > randomNum) out.innerHTML = "Ваш ответ больше"
-        else if(input < randomNum) out.innerHTML = "Ваш ответ меньше"
-        else out.innerHTML = "Ваш ответ верен"
+    if(input > randomNum) out.innerHTML = "Your answer is bigger"
+        else if(input < randomNum) out.innerHTML = "Your answer is smaller"
+        else out.innerHTML = "Your answer is right"
 
-    generated.innerHTML = `Загаданное число: ${randomNum}`
+    generated.innerHTML = `The hidden number: ${randomNum}`
 }
