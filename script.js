@@ -7,6 +7,12 @@ function onButtonClicked() {
     const generated = document.getElementById("generated")
     const input = document.getElementById("inputnum").value
 
+    if(input == "" ) {
+        out.innerHTML = "You haven't entered an answer"
+        generated.innerHTML = `Last hidden number: ${randomNum}`
+        return
+    }
+
     if(input > randomNum) out.innerHTML = "Your answer is bigger"
         else if(input < randomNum) out.innerHTML = "Your answer is smaller"
         else out.innerHTML = "Your answer is right"
