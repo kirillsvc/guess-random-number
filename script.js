@@ -13,3 +13,15 @@ function onButtonClicked() {
 
     generated.innerHTML = `The hidden number: ${randomNum}`
 }
+
+let checkIfEnter = (event) => event.keyCode === 13 
+
+document.getElementById("inputnum").addEventListener("keypress", event => {
+    const checkbtn = document.getElementById("checkbtn")
+    if(checkIfEnter(event)) checkbtn.click()
+})
+
+document.getElementById("maxNum").addEventListener("keypress", event => {
+    const inputnum = document.getElementById("inputnum")
+    if(checkIfEnter(event)) inputnum.focus()
+})
