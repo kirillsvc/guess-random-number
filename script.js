@@ -1,5 +1,8 @@
 function onButtonClicked() {
-    const randomNum = Math.floor(Math.random() * 10 + 1)
+    const multBy = document.getElementById("maxNum").value == "" ? 
+        10 : document.getElementById("maxNum").value
+
+    const randomNum = Math.floor(Math.random() * multBy + 1)
     const out = document.getElementById("out")
     const generated = document.getElementById("generated")
     const input = document.getElementById("inputnum").value
