@@ -1,11 +1,11 @@
 function onButtonClicked() {
-    const multBy = document.getElementById("maxNum").value == "" ? 
-        10 : document.getElementById("maxNum").value
+    const multBy = getById("maxNum").value == "" ? 
+        10 : get("maxNum").value
 
     const randomNum = Math.floor(Math.random() * multBy + 1)
-    const out = document.getElementById("out")
-    const generated = document.getElementById("generated")
-    const input = document.getElementById("inputnum").value
+    const out = getById("out")
+    const generated = getById("generated")
+    const input = getById("inputnum").value
 
     if(input == "" ) {
         out.innerHTML = "You haven't entered an answer"
@@ -20,14 +20,15 @@ function onButtonClicked() {
     generated.innerHTML = `The hidden number: ${randomNum}`
 }
 
+const getById = (id) => document.getElementById(id)
 const checkIfEnter = (event) => event.keyCode === 13 
 
-document.getElementById("inputnum").addEventListener("keypress", event => {
-    const checkbtn = document.getElementById("checkbtn")
+getById("inputnum").addEventListener("keypress", event => {
+    const checkbtn = getById("checkbtn")
     if(checkIfEnter(event)) checkbtn.click()
 })
 
-document.getElementById("maxNum").addEventListener("keypress", event => {
-    const inputnum = document.getElementById("inputnum")
+getById("maxNum").addEventListener("keypress", event => {
+    const inputnum = getById("inputnum")
     if(checkIfEnter(event)) inputnum.focus()
 })
